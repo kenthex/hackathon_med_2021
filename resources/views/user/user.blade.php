@@ -26,9 +26,9 @@
             <label for="">Образ жизни</label>
             <select class="form-control" id="lifestyle" name="lifestyle">
 {{--                <option disabled selected>Выберите</option>--}}
-                <option {{ auth()->user()->lifestyle == 1 ? "selected" : "" }}>1</option>
-                <option {{ auth()->user()->lifestyle == 2 ? "selected" : "" }}>2</option>
-                <option {{ auth()->user()->lifestyle == 3 ? "selected" : "" }}>3</option>
+                <option {{ auth()->user()->lifestyle == 1 ? "selected" : "" }} value="1">Активный</option>
+                <option {{ auth()->user()->lifestyle == 2 ? "selected" : "" }} value="2">Гиподинамичный</option>
+                <option {{ auth()->user()->lifestyle == 3 ? "selected" : "" }} value="3">Смешанный</option>
             </select>
         </div>
         @csrf
