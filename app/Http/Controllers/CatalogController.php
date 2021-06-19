@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Brand;
+use Illuminate\Support\Facades\Auth;
+
 
 class CatalogController extends Controller
 {
@@ -16,7 +18,8 @@ class CatalogController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        if(Auth::check())
+            $this->middleware('auth');
     }
 
     public function index() {

@@ -10,6 +10,9 @@
             <a href="{{ route('catalog.product', ['slug' => $product->slug]) }}"
                class="btn btn-dark">Перейти к товару
             </a>
+            @if( \Illuminate\Support\Facades\Auth::check() )
+
+
             @if( (auth()->user()->vit_a < 2) && str_contains($product->slug, 'vitamin-A'))
                 <p style="color: #d39e00;">* рекомендовано Вам</p>
             @endif
@@ -21,6 +24,8 @@
             @endif
             @if( (auth()->user()->vit_b6 < 8) && str_contains($product->slug, 'vitamin-B6'))
                 <p style="color: #d39e00;">* рекомендовано Вам</p>
+            @endif
+
             @endif
         </div>
     </div>
