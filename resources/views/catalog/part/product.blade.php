@@ -13,18 +13,34 @@
             @if( \Illuminate\Support\Facades\Auth::check() )
 
 
-            @if( (auth()->user()->vit_a < 2) && str_contains($product->slug, 'vitamin-A'))
-                <p style="color: #d39e00;">* рекомендовано Вам</p>
-            @endif
-            @if( (auth()->user()->vit_b1 < 2) && str_contains($product->slug, 'vitamin-B1'))
-                <p style="color: #d39e00;">* рекомендовано Вам</p>
-            @endif
-            @if( (auth()->user()->vit_b3 < 3) && str_contains($product->slug, 'vitamin-B3'))
-                <p style="color: #d39e00;">* рекомендовано Вам</p>
-            @endif
-            @if( (auth()->user()->vit_b6 < 8) && str_contains($product->slug, 'vitamin-B6'))
-                <p style="color: #d39e00;">* рекомендовано Вам</p>
-            @endif
+                @if( (auth()->user()->vit_a < 2) && str_contains($product->slug, 'vitamin-A'))
+                    <p style="color: #d39e00;">* рекомендовано Вам</p>
+                @endif
+                @if( (auth()->user()->vit_b1 < 2) && str_contains($product->slug, 'vitamin-B1'))
+                    <p style="color: #d39e00;">* рекомендовано Вам</p>
+                @endif
+                @if( (auth()->user()->vit_b3 < 3) && str_contains($product->slug, 'vitamin-B3'))
+                    <p style="color: #d39e00;">* рекомендовано Вам</p>
+                @endif
+                @if( (auth()->user()->vit_b6 < 8) && str_contains($product->slug, 'vitamin-B6'))
+                    <p style="color: #d39e00;">* рекомендовано Вам</p>
+                @endif
+
+                @if( (auth()->user()->vit_b12 < 189) && str_contains($product->slug, 'vitamin-B12'))
+                    <p style="color: #d39e00;">* рекомендовано Вам</p>
+                @endif
+
+                 @if( (auth()->user()->vit_d < 3) && str_contains($product->slug, 'vitamin-D'))
+                     <p style="color: #d39e00;">* рекомендовано Вам</p>
+                 @endif
+
+                 @if( (auth()->user()->vit_e < 5) && str_contains($product->slug, 'vitamin-E'))
+                     <p style="color: #d39e00;">* рекомендовано Вам</p>
+                 @endif
+
+                 @if( (auth()->user()->hemoglobin < 130) && str_contains($product->slug, 'Ferrum'))
+                     <p style="color: #d39e00;">* рекомендовано Вам</p>
+                 @endif
 
             @endif
         </div>
