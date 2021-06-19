@@ -1,7 +1,7 @@
 @extends('catalog.site')
 
 @section('content')
-    <h1>Каталог товаров</h1>
+    <h1>Добро пожаловать!</h1>
 
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ducimus, eligendi

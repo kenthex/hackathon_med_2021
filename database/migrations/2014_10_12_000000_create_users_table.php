@@ -20,6 +20,21 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->integer('age')->nullable();
+            $table->integer('height')->nullable();
+            $table->integer('weight')->nullable();
+            $table->integer('lifestyle')->nullable();
+            $table->integer('hemoglobin')->nullable();
+            $table->integer('cholesterol')->nullable();
+            $table->integer('vit_a')->nullable();
+            $table->integer('vit_b1')->nullable();
+            $table->integer('vit_b3')->nullable();
+            $table->integer('vit_b6')->nullable();
+            $table->integer('vit_b12')->nullable();
+            $table->integer('vit_c')->nullable();
+            $table->integer('vit_e')->nullable();
+            $table->integer('vit_d')->nullable();
+            $table->integer('vit_k')->nullable();
             $table->timestamps();
         });
     }

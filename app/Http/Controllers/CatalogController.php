@@ -9,7 +9,18 @@ use App\Models\Brand;
 
 class CatalogController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index() {
+
         $roots = Category::get();
         return view('catalog.index', compact('roots'));
     }

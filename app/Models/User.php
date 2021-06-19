@@ -9,8 +9,12 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    //use HasFactory, Notifiable;
 
+    public function getUserData($id)
+    {
+        return User::where('id', $this->id)->get();
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -20,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'age'
     ];
 
     /**

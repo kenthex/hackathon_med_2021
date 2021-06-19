@@ -6,7 +6,9 @@
             <div class="card">
                 <div class="card-header">
                     <h1>{{ $product->name }}</h1>
+
                 </div>
+
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">

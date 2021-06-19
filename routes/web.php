@@ -24,7 +24,10 @@ Route::get('/basket/checkout', [\App\Http\Controllers\BasketController::class, '
 
 Route::name('user.')->prefix('user')->group(function () {
     Route::get('index', [App\Http\Controllers\UserController::class, 'index'])->name('index');
+    Route::post('save_main/{id}', [App\Http\Controllers\UserController::class, 'save_main'])->name('save_main');
+    Route::post('save_blood/{id}', [App\Http\Controllers\UserController::class, 'save_blood'])->name('save_blood');
     Auth::routes();
 });
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
