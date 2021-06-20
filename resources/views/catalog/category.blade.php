@@ -1,7 +1,7 @@
 @extends('catalog.site')
 
 @section('content')
-    <h1>{{ $category->name }}</h1>
+    <h4>{{ $category->name }}</h4>
     <p>{{ $category->content }}</p>
     <div class="row">
         @foreach ($category->products as $product)

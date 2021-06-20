@@ -5,22 +5,17 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h1>{{ $product->name }}</h1>
-
+                    <h5>{{ $product->name }}</h5>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <img src="{{ $product->image }}"
+                        <div class="col-3">
+                            <img width="150" height="150" src="{{ $product->image }}"
                                  alt="" class="img-fluid">
                         </div>
-                        <div class="col-md-6">
-                            <p>Цена: {{ number_format($product->price, 2, '.', '') }}</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="mt-4 mb-0">{{ $product->content }}</p>
+                        <div class="col-9">
+                            <p> <span style="font-weight: bold;">Цена:</span> {{ number_format($product->price, 2, '.', '') }}</p>
+                            <p class="mt-4 mb-0"><span style="font-weight: bold;">Описание:</span> {{ $product->content }}</p>
                         </div>
                     </div>
                 </div>
