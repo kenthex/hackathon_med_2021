@@ -5,7 +5,7 @@
     <p>Добро пожаловать, {{ auth()->user()->name }}</p>
     <form action="{{ route('user.logout') }}" method="post">
         @csrf
-        <button type="submit" class="btn btn-primary">Выйти</button>
+        <button type="submit" class="btn btn-warning">Выйти</button>
     </form>
     <br>
     <div class="card-header">
@@ -42,7 +42,7 @@
                     </div>
                     <br>
                     @csrf
-                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <button type="submit" class="btn btn-success">Сохранить</button>
                 </form>
             </div>
             <div class="col-4">
@@ -104,7 +104,7 @@
                     </div>
                     <br>
                     @csrf
-                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <button type="submit" class="btn btn-success">Сохранить</button>
                 </form>
             </div>
         </div>

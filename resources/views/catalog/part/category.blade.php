@@ -8,7 +8,7 @@
         </div>
         <div class="card-footer">
             <a href="{{ route('catalog.category', ['slug' => $category->slug]) }}"
-               class="col-12 btn btn-dark">Перейти в раздел</a>
+               class="col-12 btn btn-warning">Перейти в раздел</a>
         </div>
     </div>
 </div>

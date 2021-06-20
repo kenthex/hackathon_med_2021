@@ -49,7 +49,7 @@
         </div>
         <div class="card-footer">
             <a href="{{ route('catalog.product', ['slug' => $product->slug]) }}"
-               class="col-12 btn btn-dark">Перейти к товару
+               class="col-12 btn btn-warning">Перейти к товару
             </a>
         </div>
     </div>
